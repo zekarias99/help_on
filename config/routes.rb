@@ -1,9 +1,13 @@
 HelpOn::Application.routes.draw do
-  root to: 'pages#home'
 
+  root to: 'pages#home'
+  
+  match '/signup',  to: 'users#new'
+  
   match '/about',   to: 'pages#about'
   match '/contact', to: 'pages#contact'
   match '/how',     to: 'pages#how'
+ 
 
 
 
