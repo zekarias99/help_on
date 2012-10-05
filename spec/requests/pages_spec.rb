@@ -36,6 +36,8 @@ describe "Pages" do
     
     it "shuld have the rigt links on the layout" do
       visit root_path
+      click_link "Sign in"
+      page.should have_selector 'title', text: full_title('Sign in')
       click_link "About Us"
       page.should have_selector 'title', text: full_title('About Us')
       click_link "How It Works"
